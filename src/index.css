@@ -629,9 +629,35 @@ body {
   background: #9d4edd;
   box-shadow: 0 0 20px #9d4edd;
 }
-/* ================= RESPONSIVE FIX ================= */
+/* ================= FULL RESPONSIVE FIX ================= */
 
+/* ----------- LAPTOP (Below 1200px) ----------- */
+@media (max-width: 1200px) {
+
+  .hero {
+    padding: 0 3rem;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .section,
+  .about-section,
+  .skills-section,
+  .projects-section {
+    padding: 5rem 3rem;
+  }
+}
+
+
+/* ----------- TABLET (Below 992px) ----------- */
 @media (max-width: 992px) {
+
   .hero {
     flex-direction: column;
     text-align: center;
@@ -643,9 +669,15 @@ body {
     margin-left: 0;
   }
 
+  .hero-image {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
   .hero-img {
     margin-left: 0;
-    width: 70%;
+    width: 60%;
+    max-width: 350px;
   }
 
   .about-container {
@@ -653,27 +685,53 @@ body {
     text-align: center;
   }
 
+  .about-image img {
+    width: 250px;
+  }
+
+  .skills-section,
+  .projects-section {
+    padding: 4rem 2rem;
+  }
+
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 
-@media (max-width: 600px) {
+
+/* ----------- MOBILE (Below 768px) ----------- */
+@media (max-width: 768px) {
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-right: 0;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
   .hero-text h1 {
     font-size: 2.5rem;
   }
 
   .hero-text h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
   }
 
-  .project-buttons {
-    flex-direction: column;
-  }
-
-  .project-buttons a {
-    width: 100%;
-    text-align: center;
+  .section-title,
+  .skills-title,
+  .projects-title,
+  .about-title,
+  .contact-title {
+    font-size: 2rem;
   }
 
   .section,
@@ -683,4 +741,43 @@ body {
   .contact-section {
     padding: 3rem 1.5rem;
   }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    padding: 2rem;
+  }
+
+  .contact-buttons a {
+    margin: 0.5rem;
+    display: block;
+  }
+}
+
+
+/* ----------- SMALL MOBILE (Below 480px) ----------- */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
