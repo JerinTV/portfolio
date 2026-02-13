@@ -629,3 +629,58 @@ body {
   background: #9d4edd;
   box-shadow: 0 0 20px #9d4edd;
 }
+/* ================= RESPONSIVE FIX ================= */
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-img {
+    margin-left: 0;
+    width: 70%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .project-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section,
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .contact-section {
+    padding: 3rem 1.5rem;
+  }
+}
