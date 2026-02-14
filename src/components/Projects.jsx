@@ -20,8 +20,8 @@ function Projects() {
         "A modern, ultra-premium personal portfolio built with React featuring animated sections, glowing effects, and responsive design.",
       image: project2,
       tech: ["React", "CSS", "JavaScript"],
-      live: "#",
-      github: "#",
+      live: "https://portfolio1-rust-omega.vercel.app",
+      github: "https://github.com/JerinTV/portfolio_1.git",
     },
     {
       title: "Blockchain Fake Product Detection",
