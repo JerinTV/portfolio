@@ -292,6 +292,37 @@ img {
   color: black;
 }
 
+.project-buttons button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  border: 1px solid #c77dff;
+  color: #c77dff;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-buttons button:hover:not(:disabled) {
+  background: #c77dff;
+  color: black;
+}
+
+.project-buttons a[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.project-buttons a[aria-disabled="true"]:hover {
+  background: transparent;
+  color: #c77dff;
+}
+
+.project-buttons button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* ================= CONTACT ================= */
 
 .contact-section {

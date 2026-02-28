@@ -4,6 +4,12 @@ import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 
 function Projects() {
+  const isExternalLink = (url) => typeof url === "string" && url.startsWith("http");
+  const openExternal = (url) => {
+    if (!isExternalLink(url)) return;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   const projects = [
     {
       title: "Smart Helmet Dashboard",
@@ -29,11 +35,11 @@ function Projects() {
         "A blockchain-powered authentication system that prevents counterfeit products using decentralized ledger technology and smart contracts.",
       image: project3,
       tech: ["Blockchain", "Solidity", "React", "Node.js"],
-      live: "#",
-      github: "#",
+      live: "https://blockchain-hu7vz6pab-jerintvs-projects.vercel.app",
+      github: "https://github.com/JerinTV/blockchain.git",
     },
     {
-      title: "Zentode – Smart To-Do App",
+      title: "Zentode - Smart To-Do App",
       description:
         "A productivity-focused task management application built with React featuring dynamic updates, local storage integration, and clean UI.",
       image: project4,
@@ -67,12 +73,25 @@ function Projects() {
                 </div>
 
                 <div className="project-buttons">
-                  <a href={project.live} target="_blank" rel="noreferrer">
-                    Live Demo
-                  </a>
-                  <a href={project.github} target="_blank" rel="noreferrer">
-                    GitHub
-                  </a>
+                  {isExternalLink(project.live) ? (
+                    <button type="button" onClick={() => openExternal(project.live)}>
+                      Live Demo
+                    </button>
+                  ) : (
+                    <button type="button" aria-disabled="true" disabled>
+                      Live Demo Soon
+                    </button>
+                  )}
+
+                  {isExternalLink(project.github) ? (
+                    <button type="button" onClick={() => openExternal(project.github)}>
+                      GitHub
+                    </button>
+                  ) : (
+                    <button type="button" aria-disabled="true" disabled>
+                      GitHub Soon
+                    </button>
+                  )}
                 </div>
 
               </div>
