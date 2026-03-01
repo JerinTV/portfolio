@@ -4,22 +4,20 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import "@fontsource/bruno-ace";  /* loads the font */
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <Navbar
-        brand="Jerin T V"
-        links={["Home", "About", "Skills", "Projects", "Contact"]}
-      />
+    <div className="app-shell">
+      <Navbar links={["Home", "About", "Skills", "Projects", "Contact"]} />
 
-      <Hero name="Jerin T V" role="Frontend Developer" />
+      <Hero name="Jerin T V" role="Frontend Developer (Learning UI/UX)" />
       <About />
       <Skills />
       <Projects />
       <Contact />
-    </>
+      <Footer />
+    </div>
   );
 }
 

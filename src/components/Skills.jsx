@@ -7,43 +7,75 @@ import { SiJavascript } from "react-icons/si";
 
 function Skills() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 850, once: true });
   }, []);
 
   const skills = [
-    { name: "HTML", level: 90, icon: <FaHtml5 /> },
-    { name: "CSS", level: 85, icon: <FaCss3Alt /> },
-    { name: "JavaScript", level: 80, icon: <SiJavascript /> },
-    { name: "React", level: 75, icon: <FaReact /> },
-    { name: "Git & GitHub", level: 70, icon: <FaGitAlt /> },
-    { name: "Figma", level: 60, icon: <FaFigma /> },
+    {
+      name: "UI Design Basics",
+      level: 45,
+      icon: <FaFigma />,
+      detail: "Learning wireframes, spacing, and simple layout structure.",
+    },
+    {
+      name: "React Fundamentals",
+      level: 55,
+      icon: <FaReact />,
+      detail: "Building reusable components and basic responsive pages.",
+    },
+    {
+      name: "JavaScript Basics",
+      level: 58,
+      icon: <SiJavascript />,
+      detail: "Using arrays, objects, functions, and DOM/event handling.",
+    },
+    {
+      name: "HTML Structure",
+      level: 65,
+      icon: <FaHtml5 />,
+      detail: "Writing clean page sections, forms, and semantic tags.",
+    },
+    {
+      name: "CSS Styling",
+      level: 62,
+      icon: <FaCss3Alt />,
+      detail: "Creating responsive layouts with Flexbox, Grid, and media queries.",
+    },
+    {
+      name: "Git and GitHub",
+      level: 50,
+      icon: <FaGitAlt />,
+      detail: "Using commits, branches, and pushing projects to repositories.",
+    },
   ];
 
   return (
     <section className="skills-section" id="skills">
       <div className="skills-container">
+        <p className="section-kicker" data-aos="fade-up">
+          Capabilities
+        </p>
         <h2 className="skills-title" data-aos="fade-up">
-          My Skills
+          End-to-end product execution.
         </h2>
 
         <div className="skills-grid">
           {skills.map((skill, index) => (
             <div
               className="skill-card"
-              key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
+              key={skill.name}
+              data-aos="fade-up"
+              data-aos-delay={index * 70}
             >
               <div className="skill-header">
                 <span className="skill-icon">{skill.icon}</span>
                 <h3>{skill.name}</h3>
               </div>
 
+              <p className="skill-detail">{skill.detail}</p>
+
               <div className="progress-bar">
-                <div
-                  className="progress-fill"
-                  style={{ width: `${skill.level}%` }}
-                ></div>
+                <div className="progress-fill" style={{ width: `${skill.level}%` }}></div>
               </div>
 
               <span className="skill-percent">{skill.level}%</span>
