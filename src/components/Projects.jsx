@@ -41,7 +41,7 @@ function Projects() {
         "A blockchain-backed experience that verifies product authenticity through a transparent flow and smart contract logic.",
       image: project3,
       tech: ["Blockchain", "Solidity", "React", "Node.js"],
-      live: "https://blockchain-hu7vz6pab-jerintvs-projects.vercel.app",
+      live: "https://supply-chain-1-0rut.onrender.com/",
       github: "https://github.com/JerinTV/blockchain.git",
       featured: false,
     },
